@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <h1 id ="top1">Bat Ball Stump Game</h1>
+
+<button class="button" onclick="
+const UserChoiceMsg = 'you have chosen Bat';
+let randomNumber = Math.random() * 3;
+let computerChoice;
+if(randomNumber > 0 && randomNumber <=1){
+   computerChoice = 'Bat';
+    // console.log('Computer choice is Bat');
+}
+else if(randomNumber > 1 && randomNumber <=2){
+    computerChoice = 'Ball';
+    // console.log('Computer choice is Ball');
+}
+else{
+     computerChoice = 'Stump';
+    // console.log('Computer choice is Stump');
+}
+const computerChoiceMsg = `Computer choice is ${computerChoice}`;
+
+let resultMsg;
+
+if(computerChoice === 'Ball')
+{
+    resultMsg= '==>>>😊You have won';
+}
+else if(computerChoice === 'Bat'){
+    resultMsg=`===It's a tie`;
+}
+else if(computerChoice ==='Stump'){
+    resultMsg=`==>>>😔Computer has won`;
+}
+alert(`You have chosen Bat.\nComputer choice is ${computerChoiceMsg}. \n  ${resultMsg}`);
+">Bat</button>
+<button class="button" onclick="
+UserChoiceMsg = `You have choosen Ball`;
+randomNumber = Math.random() * 3;
+
+if(randomNumber > 0 && randomNumber <=1){
+    computerChoice = 'Bat';
+}
+else if (randomNumber > 1 && randomNumber <=2){
+    computerChoice = 'Ball'
+}
+else{
+    computerChoice = 'Stump'
+}
+computerChoiceMsg = `Computer choose is ${computerChoice}`;
+
+if(computerChoice === 'Bat'){
+    resultMsg = `😔Computer won the cricket`;
+}
+else if (computerChoice === 'Ball'){
+    resultMsg = `It's a tie Match`;
+}
+else {
+    resultMsg = `😊You won the match`;
+}
+alert(`${UserChoiceMsg} \n ${computerChoiceMsg} \n ${resultMsg}`);
+
+
+
+">Ball</button>
+<button class="button" onclick="
+UserChoiceMsg = `You have choosen Stamp`;
+randomNumber = Math.random() * 3;
+
+if(randomNumber > 0 && randomNumber <=1){
+    computerChoice = 'Bat';
+}
+else if (randomNumber > 1 && randomNumber <=2){
+    computerChoice = 'Ball'
+}
+else{
+    computerChoice = 'Stump'
+}
+computerChoiceMsg = `Computer choose is ${computerChoice}`;
+
+if(computerChoice === 'Bat'){
+    resultMsg = `😔Computer won the match`;
+}
+else if (computerChoice === 'Ball'){
+    resultMsg = `😊You won the match`;
+}
+else {
+    resultMsg = `It's a tie`;
+}
+alert(`${UserChoiceMsg} \n ${computerChoiceMsg} \n ${resultMsg}`);
+">Stamp</button>
+
+</body>
+</html>

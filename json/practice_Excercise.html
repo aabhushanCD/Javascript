@@ -1,0 +1,41 @@
+<!-- practice excersise contain use of dom manipulation with date -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Json</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(167, 142, 111);
+        }
+    </style>
+</head>
+<body>
+    <h3 id="greeting"></h3>
+   <script>
+
+        
+    
+    let date =new Date();
+    let hour =date.getHours();
+    document.querySelector('#greeting').innerText=`Hello Aabhushan ${message(date,hour)}`;
+    console.log(hour);
+    function message(date,hour)
+    {
+        if(hour < 12){
+            return `Good Morning`;
+        }else if(hour > 12 && hour < 19){
+            return `Good Afternoon`;
+        }else{
+            return `Good Evening`
+        }
+
+    }
+
+   </script>
+    
+</body>
+</html>

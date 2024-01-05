@@ -1,0 +1,37 @@
+
+body{
+    
+
+}
+#calculator{
+    border: 1px solid rgba(115, 107, 107, 0.711);
+    border-radius: 5px;
+    width:200px;
+    height: 400px;
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+#display{
+    margin: 10px;
+    width:87%;
+    font-size: xx-large;
+    height: 40px;
+    overflow:auto;
+}
+.buttonContainer{
+
+ justify-content: center;
+ 
+ padding-left: 14px;
+}
+
+.calcButton{
+    width:41px;
+    height: 62px;
+    border: none;
+    font-size: larger;
+    background-color: white;
+ 
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>click counter</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: burlywood;
+        }
+            #ClickButton{
+               height:50px;
+               width: 50px;
+               font-size:xx-large;
+               border-radius: 50px;
+               
+            }
+
+            .odd{
+                background-color: rgb(67, 42, 91);
+            }
+             .even{
+                background-color: rgb(156, 184, 184);
+             }
+        
+              #Reset{
+                border-radius: 5px;
+                margin-top: 25px;
+                background-color: brown;
+              }
+        
+    </style>
+</head>
+<body>
+    <h1> This is the click counter </h1>
+
+    <button id="ClickButton" onclick="Click_();">0</button> <br>
+    <button id="Reset" onclick="localStorage.clear();
+       Count = 0;
+       localStorage.setItem('Count',Count);
+       Update();
+    ">Reset</button>
+    <script>
+        let Count = localStorage.getItem('Count') || 0;
+        function Click_(){
+           Count ++;
+           localStorage.setItem('Count',Count);
+           Update();
+        }
+    function Update()  {
+        let button = document.querySelector("#ClickButton");
+            if(Count % 2 == 0){
+                button.classList.remove('odd');
+                button.classList.add('even');
+            }else{
+                button.classList.remove('even');
+                button.classList.add('odd');
+            }
+            button.innerText = Count;
+     }
+     Update();
+    </script>
+</body>
+</html>

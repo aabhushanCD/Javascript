@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Facebook</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .btn{
+            font-size: 15px;
+            height: 20px;
+            width: 80px;
+            color:white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+
+        }
+        .js-size-double{
+            font-size: 30px;
+            height: 40px;
+            width: 160px;
+        }
+    </style>
+</head>
+
+<body>
+   <button class="btn">Subscribe</button>
+    <script>
+
+    let variable = document.querySelector(".btn");
+    variable.addEventListener('click',event => setTimeout(doubleTheSize,1000)  )
+
+    function doubleTheSize() {
+        // let variable = document.querySelector(".btn");
+        variable.classList.add('js-size-double');
+}
+
+let arr= [1,2,3,4,5];
+let sum=0;
+
+    arr.forEach(num => {
+        sum +=num;
+        
+    })
+    console.log(sum);
+
+
+
+
+
+    //     let getbutton= document.querySelector('#Btn')
+    //     let button_event= event => console.log(`I am clicked `)
+    //    getbutton.addEventListener('click', button_event);
+
+    //     let print_name = event => console.log("This is Aabhushan Dhakal");
+    //     getbutton.addEventListener('click',print_name);
+
+
+
+ //Practice exercise 
+
+
+ 
+
+    </script>
+</body>
+</html>

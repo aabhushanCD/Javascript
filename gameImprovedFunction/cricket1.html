@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Improved game</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+  <h1 id ="top1">Bat Ball Stump Game</h1>
+<button class="" onclick="
+ let computerChoice = ComputerChoice();
+ let resultMsg;
+   if(computerChoice === 'Ball')
+        {
+        resultMsg= '==>>>😊You have won';
+        }
+        else if(computerChoice === 'Bat'){
+        resultMsg=`===It's a tie`;
+        }
+        else if(computerChoice ==='Stump'){
+        resultMsg=`==>>>😔Computer has won`;
+        }
+alert(`You have choosen Bat \n Computer has choosen ${computerChoice} \n ${resultMsg}`);
+
+
+
+">Bat</button>
+<button onclick="
+computerChoice = ComputerChoice();
+if(computerChoice === 'Bat'){
+    resultMsg = `😔Computer won the cricket`;
+}
+else if (computerChoice === 'Ball'){
+    resultMsg = `It's a tie Match`;
+}
+else {
+    resultMsg = `😊You won the match`;
+}
+alert(`You have choosen Ball \n Computer has choosen ${computerChoice} \n ${resultMsg}`);
+"
+>Ball</button>
+<button onclick="
+
+computerChoice = ComputerChoice();
+if(computerChoice === 'Bat'){
+    resultMsg = `😔Computer won the match`;
+}
+else if (computerChoice === 'Ball'){
+    resultMsg = `😊You won the match`;
+}
+else {
+    resultMsg = `It's a tie`;
+}
+alert(`You have choosen stump \n Computer has choosen ${computerChoice} \n ${resultMsg}`);"
+
+>Stamp</button>
+    
+
+<script>
+    
+// let computerChoice;
+function ComputerChoice(){
+let computerChoice;
+let randomNumber = Math.random() * 3;
+ 
+if(randomNumber > 0  &&  randomNumber <=1 ){
+     computerChoice = 'Bat';
+       // console.log('Computer choice is Bat');
+   }
+   else if(randomNumber > 1 && randomNumber <=2){
+       computerChoice ='Ball';
+       // console.log('Computer choice is Ball');
+   }
+   else{
+        computerChoice = 'Stump';
+       // console.log('Computer choice is Stump');
+   }
+   return computerChoice;
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Object</title>
+    <style>
+        body{
+            text-align:center;
+        
+        }
+    </style>
+</head>
+<body>
+    <h1>Objects</h1>
+    
+    <script>
+
+        let product1 = {
+            Size :'s',
+            price : 0,
+            Name: 'jeams',
+            'dilivery-time': 'Same day delivery',
+           };
+        // let Copy_product = Product;
+        // console.log(Product);
+        // Copy_product.Size = 'M';
+        // console.log(Product);
+        // Copy_product.price = 1000;
+        // console.log(Product);
+        // console.log(Copy_product['dilivery-time'])
+
+        // let Obj ={
+        // message: "good Job",
+        // status : "Complete",
+        // price : 1000,
+        // }
+        // console.log(Obj)
+        // let {message,status,price} = Obj;
+        // console.log(message);
+        // console.log(status);
+        // console.log(price);
+
+      
+        function IsIdenticalProduct(product1, product2){
+             if (typeof product1 !== 'object' || typeof product2 !=='object'){
+                console.warn('Parameter passed was not an object');
+                return false;
+           }
+            if(product1 == product2){
+                return true;
+            }
+
+            if(product1.Size === product2.Size && 
+               product1.price === product2.price &&
+               product1.status === product2.status){
+               return true;
+            }else {
+                return false;
+            }
+        }
+        
+        let product2 = {
+            Size :'s',
+            price : 0,
+            Name: 'jeams',
+            'dilivery-time': 'Same day delivery',
+           };
+           console.log(IsIdenticalProduct(product1,product2));
+    </script>
+</body>
+</html>
